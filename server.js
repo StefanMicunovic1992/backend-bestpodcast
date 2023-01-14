@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const routesURL = require('./routes/routes')
-const cors = require('cors')
+// const cors = require('cors')
 
 const port = process.env.PORT || 5000;
 
@@ -14,7 +14,7 @@ mongoose.connect(process.env.DATABASE_ACCESS)
     .catch((error) => console.log(error))
 
 app.use(express.json())
-app.use(cors());
+// app.use(cors());
 app.use('/app', routesURL)
 
 
